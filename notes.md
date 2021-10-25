@@ -17,6 +17,9 @@ Use of Cargo is implied in book
 
 `cargo --version` shows version of cargo installed
 
+`cargo update` updates packages
+
+
 #### Creating a new project w/ Cargo
 `cargo new $projectName` creates a new folder w/ name $projectName
 
@@ -33,3 +36,28 @@ Creates a project with a `cargo.toml` and a src directory w/ a default main file
 ##### Anatomy of TOML file
 `package` heading marks the package's metadata
 `dependencies` heading marks dependencies required for the project
+
+## Chapter 2: Programming a guessing game
+
+### Syntax
+`use std::io` imports io from the std library
+
+`let mut guess = String::new();` does a bit. 
+- `let mut` declares a mutable variable (one that can be change).
+- `String::new()` declares a new empty string. 
+
+`bar::foo()` calls foo which is an associated function of bar
+
+`foo(&bar)` passes bar as a reference to foo instead of by value. Use `&mut bar` to make bar mutable in the called function
+
+`.expect('string')` handles a returned `io::Result` return type. A Result has two values `Ok` and `Error`. If `Error` is returned, expect will print the string passed to it and kill the process
+
+`println!("string {} {}", foo, bar)` prints out `string $foo $bar`. 
+
+#### Mutability
+By default all variable are immutable. This means they can't be changed
+
+### Crates
+A crate is a package
+
+To add a crate as a dependency add it to the `[dependency]` section of the cargo.toml file. Entered as `crate = "0.0.0"` where 0.0.0 is the version
