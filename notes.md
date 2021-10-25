@@ -59,10 +59,11 @@ By default all variable are immutable. This means they can't be changed
 
 #### Match syntax
 `match` works similarly to a switch statement a full block looks like:
-```match expr {
+```
+match expr {
   option => val,
   option2 => val2,
-  }
+}
   ```
 
 ### Crates
