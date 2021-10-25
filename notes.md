@@ -57,6 +57,14 @@ Creates a project with a `cargo.toml` and a src directory w/ a default main file
 #### Mutability
 By default all variable are immutable. This means they can't be changed
 
+#### Match syntax
+`match` works similarly to a switch statement a full block looks like:
+```match expr {
+  option => val,
+  option2 => val2,
+  }
+  ```
+
 ### Crates
 A crate is a package
 
